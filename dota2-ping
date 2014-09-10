@@ -1,0 +1,76 @@
+#!/bin/bash
+# Dota2 Servers Ping Tester
+
+PS3='Please enter server: '
+options=("SE Asia 1" "SE Asia 2" "Australia" "Russia 1" "Russia 2" "Europe East" "Europe West 1" "Europe West 2" "South Africa 1" "South Africa 2" "South Africa 3" "US East" "US West" "South America 1" "South America 2" "South America 3")
+select opt in "${options[@]}"
+do
+    case $opt in
+        "SE Asia 1")
+            echo "Selected server: SE Asia 1"
+	    ping sgp-1.valve.net
+            ;;
+        "SE Asia 2")
+            echo "Selected server: SE Asia 2"
+	    ping sgp-2.valve.net
+            ;;
+        "Australia")
+            echo "Selected server: Australia"
+	    ping syd.valve.net
+            ;;
+        "Russia 1")
+            echo "Selected server: Russia 1"
+	    ping sto.valve.net
+            ;;
+        "Russia 2")
+            echo "Selected server: Russia 2"
+	    ping 185.25.180.1
+            ;;
+        "Europe East")
+            echo "Selected server: Europe East"
+	    ping vie.valve.net
+            ;;
+        "Europe West 1")
+            echo "Selected server: Europe West 1"
+	    ping lux.valve.net
+            ;;
+        "Europe West 2")
+            echo "Selected server: Europe West 2"
+	    ping 146.66.158.1
+            ;;
+        "South Africa 1")
+            echo "Selected server: South Africa 1"
+	    ping cpt-1.valve.net
+            ;;
+        "South Africa 2")
+            echo "Selected server: South Africa 2"
+	    ping 197.80.200.1
+            ;;
+        "South Africa 3")
+            echo "Selected server: South Africa 3"
+	    ping 196.38.180.1
+            ;;
+        "US East")
+            echo "Selected server: US East"
+	    ping 208.78.164.1
+            ;;
+        "US West")
+            echo "Selected server: US West"
+	    ping eat.valve.net
+            ;;
+        "South America 1")
+            echo "Selected server: South America 1"
+	    ping gru.valve.net
+            ;;
+        "South America 2")
+            echo "Selected server: South America 2"
+	    ping 209.197.29.1
+            ;;
+        "South America 3")
+	    echo "Selected server: South America 3"
+	    ping 209.197.25.1
+            break
+            ;;
+        *) echo invalid option;;
+    esac
+done
